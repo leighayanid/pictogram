@@ -1,0 +1,8 @@
+.container
+	.row
+		.col-md-8.col-md-offset-2
+			.well
+				%img{:src => "", :alt => "", :style => "height: 400px; width: 70%;"}
+				%h2= @photo.title
+				%h4= @photo.description
+				%h4= time_ago_in_words(@photo.created_at)

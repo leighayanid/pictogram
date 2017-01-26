@@ -1,9 +1,12 @@
 class PhotosController < ApplicationController
 
-	before_action :find_photo, only: [:create, :edit, :update, :destroy]
+	before_action :find_photo, only: [:show,:edit, :update, :destroy]
 
   def index
   	@photos = Photo.all
+  end
+
+  def show
   end
 
   def new
@@ -12,6 +15,11 @@ class PhotosController < ApplicationController
 
   def create
   	@photo = Photo.new(photo_params)
+  	if @photo.save
+  		redirect_to @photo
+  	else
+  		render 'new'
+  	end
   end
 
   def edit
@@ -33,7 +41,7 @@ class PhotosController < ApplicationController
   end
 
   def photo_params
-  	params.require(:pic).permit(:title, :description)
+  	params.require(:photo).permit(:title, :description)
   end
 
 end
