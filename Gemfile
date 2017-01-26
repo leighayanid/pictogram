@@ -94,4 +94,3 @@ gem 'premailer-rails'
 gem 'nokogiri'
 gem 'devise', '~> 4.2'
 gem 'cancancan'
-ruby "2.3.1"
