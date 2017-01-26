@@ -1,0 +1,15 @@
+= simple_form_for @photo, html:{ multipart: true} do |f|
+	- if @photo.errors.any?
+		#errors
+			%h2
+			= pluralize(@photo.errors.count,"error")
+			prevented this picture from saving. 
+			%ul
+				- @photo.errors.full_error_message.each do |msg|
+					%li= msg
+	= f.input :title
+	= f.input :description
+	= f.submit :submit, class: 'btn btn-info'
+
+%div
+	= link_to 'Back', root_path, class: 'btn btn-default'
