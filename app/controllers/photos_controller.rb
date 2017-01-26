@@ -1,13 +1,17 @@
 class PhotosController < ApplicationController
 
+	before_action :find_photo, only: [:create, :edit, :update, :destroy]
+
   def index
   	@photos = Photo.all
   end
 
   def new
+  	@photo = Photo.new
   end
 
   def create
+  	@photo = Photo.new(photo_params)
   end
 
   def edit
