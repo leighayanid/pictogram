@@ -3,7 +3,7 @@ class PhotosController < ApplicationController
 	before_action :find_photo, only: [:show,:edit, :update, :destroy]
 
   def index
-  	@photos = Photo.all
+  	@photos = Photo.all.where("created_at DESC")
   end
 
   def show
@@ -26,12 +26,20 @@ class PhotosController < ApplicationController
   end
 
   def update
+    if @photo.update(photo_params)
+      redirect_to @photo
+    else
+      render 'edit'
+    end
   end
 
   def delete
   end
 
   def destroy
+    @photo.destroy
+    flash[:notice] = 'Photo deleted.'
+    redirect_to photos_path
   end
 
   private
