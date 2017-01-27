@@ -5,4 +5,7 @@
 				-@photos.each do |photo|
 					%h2= photo.title
 					%h4= truncate(photo.description, length: 100)
+					%h4
+					Photo taken by: 
+					= photo.user.email
 					%h5= time_ago_in_words(photo.created_at)
