@@ -2,7 +2,7 @@
 	.row
 		.col-md-8.col-md-offset-2
 			.well
-				%img{:src => "", :alt => "", :style => "height: 400px; width: 100%;"}
+				= image_tag(@photo.image.url(:medium))
 				%h2= @photo.title
 				%h4= @photo.description
 				%h4
