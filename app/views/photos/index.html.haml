@@ -1,0 +1,13 @@
+.container
+	.row
+		.col-md-6.col-md-offset-3
+			-@photos.each do |photo|
+				= link_to photo_path(photo) do
+					.well
+						= image_tag(photo.image.url(:medium))
+						%h2= photo.title
+						%h4= truncate(photo.description, length: 100)
+						%h4
+						Photo taken by: 
+						= photo.user.email
+						%h5= time_ago_in_words(photo.created_at)

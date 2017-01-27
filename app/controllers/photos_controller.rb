@@ -1,20 +1,21 @@
 class PhotosController < ApplicationController
 
+  before_action :authenticate_user!
 	before_action :find_photo, only: [:show,:edit, :update, :destroy]
 
   def index
-  	@photos = Photo.all.where("created_at DESC")
+  	@photos = Photo.all.order("created_at DESC")
   end
 
   def show
   end
 
   def new
-  	@photo = Photo.new
+  	@photo = current_user.photos.build
   end
 
   def create
-  	@photo = Photo.new(photo_params)
+  	@photo = current_user.photos.build(photo_params)
   	if @photo.save
   		redirect_to @photo
   	else
@@ -39,7 +40,7 @@ class PhotosController < ApplicationController
   def destroy
     @photo.destroy
     flash[:notice] = 'Photo deleted.'
-    redirect_to photos_path
+    redirect_to root_path
   end
 
   private
@@ -49,7 +50,7 @@ class PhotosController < ApplicationController
   end
 
   def photo_params
-  	params.require(:photo).permit(:title, :description)
+  	params.require(:photo).permit(:title, :description, :image)
   end
 
 end
