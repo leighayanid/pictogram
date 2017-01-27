@@ -2,10 +2,11 @@
 	.row
 		.col-md-4
 			-@photos.each do |photo|
-				.well
-					%h2= photo.title
-					%h4= truncate(photo.description, length: 100)
-					%h4
-					Photo taken by: 
-					= photo.user.email
-					%h5= time_ago_in_words(photo.created_at)
+				= link_to photo_path(photo) do
+					.well
+						%h2= photo.title
+						%h4= truncate(photo.description, length: 100)
+						%h4
+						Photo taken by: 
+						= photo.user.email
+						%h5= time_ago_in_words(photo.created_at)
