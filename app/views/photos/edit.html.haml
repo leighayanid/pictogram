@@ -1,3 +1,6 @@
-= render 'form'
-= link_to 'Edit', edit_photo_path(@photo), class: 'btn btn-primary'
+.container
+	.row
+		.col-md-8.col-md-offset-2
+			= render 'form'
+			= link_to 'Delete', photo_path(@photo), method: :destroy, class: 'btn btn-danger'
 

@@ -1,8 +1,8 @@
 .container
 	.row
 		.col-md-4
-			.well
-				-@photos.each do |photo|
+			-@photos.each do |photo|
+				.well
 					%h2= photo.title
 					%h4= truncate(photo.description, length: 100)
 					%h4

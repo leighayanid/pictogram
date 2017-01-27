@@ -39,7 +39,7 @@ class PhotosController < ApplicationController
   def destroy
     @photo.destroy
     flash[:notice] = 'Photo deleted.'
-    redirect_to photos_path
+    redirect_to root_path
   end
 
   private
