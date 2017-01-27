@@ -7,6 +7,7 @@
 			%ul
 				- @photo.errors.full_error_message.each do |msg|
 					%li= msg
+	= f.input :image
 	= f.input :title
 	= f.input :description
 	= f.submit :submit, class: 'btn btn-info'
