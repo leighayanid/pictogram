@@ -13,7 +13,8 @@
 						Photo taken by
 						= @photo.user.email
 						%h4= time_ago_in_words(@photo.created_at)
-						.btn-group.pull-right
-							= link_to 'Edit', edit_photo_path(@photo), class: 'btn btn-primary'
-							= link_to 'Delete', photo_path(@photo), method: :delete, class: 'btn btn-danger'
+						- if user_signed_in?
+							.btn-group.pull-right
+								= link_to 'Edit', edit_photo_path(@photo), class: 'btn btn-primary'
+								= link_to 'Delete', photo_path(@photo), method: :delete, class: 'btn btn-danger'
 
