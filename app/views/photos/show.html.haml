@@ -1,15 +1,19 @@
 .container
 	.row
 		.col-md-8.col-md-offset-2
-			.well
-				= image_tag(@photo.image.url(:medium))
-				%h2= @photo.title
-				%h4= @photo.description
-				%h4
-				Photo taken by
-				= @photo.user.email
-				%h4= time_ago_in_words(@photo.created_at)
-				.btn-group
-					= link_to 'Edit', edit_photo_path(@photo), class: 'btn btn-primary'
-					= link_to 'Delete', photo_path(@photo), method: :delete, class: 'btn btn-danger'
+			#masonry-container.transitions-enabled
+				.box.panel.panel-default
+					.panel-header
+						= image_tag(@photo.image.url)
+					.panel-body
+						%h2= @photo.title
+						%h4= @photo.description
+					.panel-footer
+						%h4
+						Photo taken by
+						= @photo.user.email
+						%h4= time_ago_in_words(@photo.created_at)
+						.btn-group.pull-right
+							= link_to 'Edit', edit_photo_path(@photo), class: 'btn btn-primary'
+							= link_to 'Delete', photo_path(@photo), method: :delete, class: 'btn btn-danger'
 
