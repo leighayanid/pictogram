@@ -188,6 +188,8 @@ GEM
     lumberjack (1.0.11)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    masonry-rails (0.2.4)
+      railties
     meta-tags (2.4.0)
       actionpack (>= 3.2.0, <= 5.1.0)
     method_source (0.8.2)
@@ -376,6 +378,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   lograge
+  masonry-rails
   meta-tags
   modernizr-rails
   nokogiri
