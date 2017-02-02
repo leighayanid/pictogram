@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-	resources :photos
+	resources :photos do
+		member do
+			put "like", to: "photos#upvote"
+		end
+	end
   devise_for :users, :controllers => { }
   root 'setup#index'
   get '/setup' => 'setup#index'
