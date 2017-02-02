@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
 	resources :photos do
-		members do
-			put "like", to: "photo#upvote"
+		member do
+			put "like", to: "photos#upvote"
 		end
 	end
   devise_for :users, :controllers => { }
