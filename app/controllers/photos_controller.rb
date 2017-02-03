@@ -1,7 +1,7 @@
 class PhotosController < ApplicationController
 
   before_action :authenticate_user!, except: [:index, :show]
-	before_action :find_photo, only: [:show,:edit, :update, :destroy]
+	before_action :find_photo, only: [:show,:edit, :update, :destroy, :upvote]
 
   def index
   	@photos = Photo.all.order("created_at DESC")
@@ -41,6 +41,11 @@ class PhotosController < ApplicationController
     @photo.destroy
     flash[:notice] = 'Photo deleted.'
     redirect_to root_path
+  end
+
+  def upvote
+    @photo.upvote_by current_user
+    redirect_to :back
   end
 
   private
