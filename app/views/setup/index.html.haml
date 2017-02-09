@@ -16,16 +16,16 @@
       }
 
   %body
-    = render partial: "application/header"
-    = render partial: "application/flashes"
-    .container
-      .row
-        #maximage
-          .first-item
-            %img{:src => "img1.jpg", :alt => ""}
-          %img{:src => "img2.jpg", :alt => ""}
-          %img{:src => "img3.jpg", :alt => ""}
-          %img{:src => "img4.jpg", :alt => ""}
-          %img{:src => "img5.jpg", :alt => ""}
+    / = render partial: "application/header"
+    / = render partial: "application/flashes"
+    #maximage
+      .first-item
+        = image_tag("img1.jpg")
+      = image_tag("img2.jpg")
+      = image_tag("img3.jpg")
+      = image_tag("img4.jpg")
+      = image_tag("img5.jpg")
+
+
        
           
