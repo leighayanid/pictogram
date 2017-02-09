@@ -54,3 +54,23 @@
 // resort if you really truly can't style your content more generally.
 // @import 'sections/profile_page';
 
+
+//index setup
+.banner-image{
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.9;
+  background-image: image-url('loco-1897635_1920.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
