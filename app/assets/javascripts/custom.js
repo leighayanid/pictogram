@@ -1,15 +1,16 @@
  $(function() {
-     $('#maximage').maximage({
+     jQuery('#maximage').maximage({
          cycleOptions: {
-             fx: 'scrollHorz',
-             speed: 800,
-             timeout: 5000,
+             fx: 'fade',
+             easing: 'easeOutCubic',
+             speed: 1000,
+             timeout: 4000,
              prev: '#arrow_left',
              next: '#arrow_right'
          },
          onFirstImageLoaded: function() {
              jQuery('#cycle-loader').hide();
-             jQuery('#maximage').fadeIn('slow');
+             jQuery('#maximage').fadeIn('fast');
          }
      });
  });
