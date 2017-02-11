@@ -18,59 +18,29 @@
 *= require 'masonry/infinitescroll'
 *= require 'masonry/right-to-left'
 *= require 'masonry/transitions'
+*= require jquery.maximage.min
 */
 
 // These both need to be imported before bootstrap:
 @import 'globals/fonts';
 @import 'globals/variables';
-
-
 // --------------Bootstrap-----------------------------
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
-
 // Uncomment if you want to use the default bootstrap theme
 // @import 'bootstrap/theme';
-
-
 // --------------Global definitions--------------------
 // For example (add your own!!):
 @import 'globals/mixins';
-
-
 // --------------Shared styles-------------------------
 // Common base CSS modifications. For example:
 @import 'shared/buttons';
 @import 'shared/grid';
-
-
 // --------------Components----------------------------
 // Create your own and modify/extend Bootstrap's. For example:
 @import 'components/panel';
 @import 'components/profile_panels';
-
 // --------------Sections------------------------------
 // Page-specific styles. These should *only* be used as a last
 // resort if you really truly can't style your content more generally.
 // @import 'sections/profile_page';
-
-
-//index setup
-.banner-image{
-	height: 100%;
-	width: 100%;
-	z-index: 1;
-	display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0.9;
-  background-image: image-url('loco-1897635_1920.jpg');
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  -ms-background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-}
