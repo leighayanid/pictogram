@@ -24,11 +24,11 @@
     %header.slideup.affix-top{ data: { spy: "affix", "offset-top": 10 } }
       = navbar id: "navbar", fluid: true, position: :top, padding: 0 do
         = vertical do
-          = link_to "Pictogram", "#top"
+          = link_to "Pictogram", root_path , :class => "nav_title"
         = horizontal do
           = nav class: 'navbar-right' do
-            = link_to "Login", new_user_session_path
-            = link_to "Register", new_user_registration_path
+            = link_to "Login", new_user_session_path, class: 'nav_text'
+            = link_to "Register", new_user_registration_path, class: 'nav_text'
 
     = yield
 
