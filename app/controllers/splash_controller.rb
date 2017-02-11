@@ -2,6 +2,9 @@ class SplashController < ApplicationController
   skip_before_action :authenticate
 
   def index
+  	if user_signed_in?
+  		redirect_to photos_path
+  	end
   end
 
   def signup
