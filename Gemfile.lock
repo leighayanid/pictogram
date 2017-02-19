@@ -126,6 +126,8 @@ GEM
     faraday (0.11.0)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.17-x86-mingw32)
+    font-awesome-sass (4.7.0)
+      sass (>= 3.2)
     formatador (0.2.5)
     gherkin (4.0.0)
     gibbon (3.0.1)
@@ -378,6 +380,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   fakeredis
+  font-awesome-sass
   gibbon
   guard-cucumber
   guard-rspec (~> 4.6.4)
