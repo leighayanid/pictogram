@@ -27,6 +27,7 @@
           = link_to "Pictogramm", root_path , :class => "nav_title"
         = horizontal do
           = nav class: 'navbar-right' do
+            = link_to "Explore", photos_path, class: 'nav_text'
             = link_to "Login", new_user_session_path, class: 'nav_text'
             = link_to "Register", new_user_registration_path, class: 'nav_text'
 
