@@ -1,11 +1,14 @@
 = navbar position: :static do
   = vertical do
-    = link_to root_path do
-      %span.glyphicon.glyphicon-cloud
+    = link_to root_path, :class => "title" do
+      %span.fa.fa-camera
       Pictogramm
   = horizontal do
     = nav class: 'navbar-right' do
-      = link_to 'Contact', ""
-      = link_to 'About', ""
-      = link_to 'Upload Photo', new_photo_path
+      = link_to "" do
+        %span.fa.fa-info
+        About
+      = link_to new_photo_path do
+        %span.fa.fa-cloud-upload
+        Upload Photo
       = render partial: "application/account_dropdown"
