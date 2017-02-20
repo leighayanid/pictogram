@@ -1,6 +1,6 @@
 %li.dropdown
   %a.dropdown-toggle{ "href" => "#", "data-toggle"=>"dropdown", "role" => "button", "aria-expanded"=>"false"}
-    <span class="fa fa-cog"> Account <span class="caret"></span>
+    Account <span class="caret"></span>
   %ul.dropdown-menu
     - if user_signed_in?
       = link_to edit_user_registration_path do
