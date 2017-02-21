@@ -1,16 +1,21 @@
-.navbar a{
-	font-size: 25px;
+.navbar{
+	a{
+		font-size: 25px;
+	}
+}
+.navbar-right{
+	a{
+		font-size: 16px;
+	}
+	span{
+		font-size: 20px;
+	}
 }
 
-.navbar-right a{
-	font-size: 16px;
-}
-
-#inline{
-	height: 4px;
-	background-color: #00C52E;
-	padding: 0px;
-	border: 0px;
-	border-style: none;
-	position: static;
+.dropdown-menu{
+	a{
+		height: 50px;
+		z-index: -999;
+		font-size: 16px;
+	}
 }
