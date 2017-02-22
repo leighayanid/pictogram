@@ -1,0 +1,25 @@
+.navbar{
+	a{
+		font-size: 25px;
+	}
+}
+.navbar-right{
+	a{
+		font-size: 16px;
+	}
+	span{
+		font-size: 20px;
+	}
+	.dropdown-toggle{
+		@extends a
+	}
+}
+
+.dropdown-menu{
+	a{
+		height: 50px;
+		z-index: -999;
+		font-size: 16px;
+	}
+}
+

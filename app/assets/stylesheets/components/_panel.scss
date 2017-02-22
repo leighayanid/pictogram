@@ -8,7 +8,14 @@
 //
 // Example:
 //
-.panel.inverted-panel {
-  background-color: $navbar-default-color;
-  color: $navbar-default-color;
+.panel_design{
+	margin: 10% 0%;
+	border-color: $navbar-default-bg;
+	.btn-primary{
+		background-color: $navbar-default-bg;
+		border-style: none;
+	}
+	.h2{
+		margin: 15%;
+	}
 }
