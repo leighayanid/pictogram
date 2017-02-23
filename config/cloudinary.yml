@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: rentapp
+  api_key: '834633977881291'
+  api_secret: Q11RAIP6TdssH2T89vFWZTsFN0Q
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: rentapp
+  api_key: '834633977881291'
+  api_secret: Q11RAIP6TdssH2T89vFWZTsFN0Q
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: rentapp
+  api_key: '834633977881291'
+  api_secret: Q11RAIP6TdssH2T89vFWZTsFN0Q
+  enhance_image_tag: true
+  static_image_support: false
