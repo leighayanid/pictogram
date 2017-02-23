@@ -25,4 +25,4 @@
 /docs
 
 #ignore images
-/public/system/*
+/public/*
