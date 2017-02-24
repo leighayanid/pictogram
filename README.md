@@ -1,24 +1,27 @@
-# README
+Pictogramm
+============
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A photo-uploading site built in Rails 5 and Cloudinary for image hosting. 
 
-Things you may want to cover:
+![Pictogramm Preview](http://i.imgur.com/o6FHjeY.png)
 
-* Ruby version
+---
 
-* System dependencies
+## Setup
+Clone this repo to your desktop and run `bundle install` to install all the dependencies.
 
-* Configuration
+You might want to look into `app/config/database.yml` to make changes to the database you want to use. 
 
-* Database creation
+Create an account on ![Cloudinary](https://cloudinary.com), download the YAML file and put inside config folder.
 
-* Database initialization
+---
 
-* How to run the test suite
+## Usage
+Once the dependencies are installed, you can run  `rails s` to start the application. You will then be able to access it at localhost:3000
 
-* Services (job queues, cache servers, search engines, etc.)
+---
 
-* Deployment instructions
+## License
+>You can check out the full license [here](https://github.com/leighayanid/pictogramm/blob/master/LICENSE.md)
 
-* ...
+This project is licensed under the terms of the **MIT** license.
