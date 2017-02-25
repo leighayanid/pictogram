@@ -22,3 +22,9 @@
 // .btn-primary.inverse {
 //   @include button-variant($btn-primary-inverse-color, $btn-primary-inverse-bg, $btn-primary-inverse-border);
 // }
+
+//main button design
+.mbd{
+	background-color: $navbar-default-bg;
+	border-style: none;
+}
