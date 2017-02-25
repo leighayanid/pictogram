@@ -12,7 +12,7 @@ Clone this repo to your desktop and run `bundle install` to install all the depe
 
 You might want to look into `app/config/database.yml` to make changes to the database you want to use. 
 
-Create an account on ![Cloudinary](https://cloudinary.com), download the YAML file and put inside config folder.
+Create an account on [Cloudinary](https://cloudinary.com), download the YAML file and put inside config folder.
 
 ---
 
