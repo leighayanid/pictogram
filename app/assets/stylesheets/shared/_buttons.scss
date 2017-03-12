@@ -28,3 +28,8 @@
 	background-color: $navbar-default-bg;
 	border-style: none;
 }
+
+.mbd-border{
+	@extends .mbd;
+	border-style: 1px solid $navbar-default-bg;
+}

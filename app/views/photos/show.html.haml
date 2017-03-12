@@ -19,5 +19,5 @@
 									%span.glyphicon.glyphicon-thumbs-up
 									= @photo.get_upvotes.size
 								= link_to 'Edit Photo', edit_photo_path(@photo), class: 'btn btn-primary'
-								= link_to 'Delete Photo', photo_path(@photo), method: :delete, class: 'btn btn-danger'
+								= link_to 'Delete Photo', photo_path(@photo), method: :delete, class: 'btn btn-primary mbd mbd-border'
 
