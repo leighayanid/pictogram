@@ -13,4 +13,5 @@
              jQuery('#maximage').fadeIn('fast');
          }
      });
+     
  });
