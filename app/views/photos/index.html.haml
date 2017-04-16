@@ -6,7 +6,7 @@
 					.box.panel.panel-default.design
 						= link_to image_tag(photo.image.url), photo_path(photo)
 						%hr/
-						%h2= photo.title
-						%h4= truncate(photo.description, length: 100)
-						%h5= 'Photo taken by:' + photo.user.email
-						%h5= 'Uploaded ' + time_ago_in_words(photo.created_at) + ' ago.'
+						%h3= photo.title
+						%p= truncate(photo.description, length: 100)
+						%p= 'Photo taken by: ' + photo.user.email
+						%p= 'Uploaded ' + time_ago_in_words(photo.created_at) + ' ago.'
