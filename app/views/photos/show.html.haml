@@ -17,6 +17,8 @@
 								= link_to like_photo_path(@photo), method: :put, class: 'btn btn-default' do
 									%span.glyphicon.glyphicon-thumbs-up
 									= @photo.get_upvotes.size
-								= link_to 'Edit Photo', edit_photo_path(@photo), class: 'btn btn-primary'
-								= link_to 'Delete Photo', photo_path(@photo), method: :delete, class: 'btn btn-primary mbd mbd-border'
+								- if can? :update, @photo
+									.btn-group.pull-right	
+										= link_to 'Edit Photo', edit_photo_path(@photo), class: 'btn btn-primary'
+										= link_to 'Delete Photo', photo_path(@photo), method: :delete, class: 'btn btn-primary mbd mbd-border'
 
