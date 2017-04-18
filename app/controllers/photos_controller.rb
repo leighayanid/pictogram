@@ -3,7 +3,7 @@ class PhotosController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 	before_action :find_photo, only: [:show,:edit, :update, :destroy, :upvote]
 	load_and_authorize_resource param_method: :photo_params
-	load_and_authorize_resource :through => :current_user
+	load_and_authorize_resource :through => :current_user, except: [:index]
 
   def index
   	@photos = Photo.all.order("created_at DESC")
