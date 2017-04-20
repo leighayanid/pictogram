@@ -1,0 +1,2 @@
+module MyPhotosHelper
+end
