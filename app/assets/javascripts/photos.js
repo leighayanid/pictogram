@@ -5,5 +5,10 @@ $(function() {
         isAnimated: !Modernizr.csstransitions,
         isFitWidth: true
     });
+     $('#masonry-myphotos').masonry({
+        itemSelector: '.box',
+        columnWidth: 100,
+        isAnimated: !Modernizr.csstransitions
+    });
 
 });
