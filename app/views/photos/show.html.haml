@@ -15,7 +15,7 @@
 						- if user_signed_in?
 							.btn-group.pull-right
 								= link_to like_photo_path(@photo), method: :put, class: 'btn btn-default' do
-									%span.glyphicon.glyphicon-thumbs-up
+									%span.fa.fa-heart
 									= @photo.get_upvotes.size
 								- if can? :update, @photo
 									.btn-group.pull-right	

@@ -11,4 +11,8 @@
       = link_to new_photo_path do
         %span.fa.fa-cloud-upload
         Upload Photo
+      - if user_signed_in?  
+        = link_to "" do
+          %span.fa.fa-picture-o
+          My Photos
       = render partial: "application/account_dropdown"
