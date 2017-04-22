@@ -9,7 +9,7 @@ $(function() {
         itemSelector: '.box',
         columnWidth: 200,
         isAnimated: !Modernizr.csstransitions,
-        isRTL: true
+        isLTR: true
     });
 
 });

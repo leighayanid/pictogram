@@ -1,11 +1,10 @@
 .container
-	.col-md-6.col-md-offset-3
-		#masonry-myphotos.transitions-enabled
-			-@photos.each do |photo|
-				.box.panel.panel-default.design
-					= link_to image_tag(photo.image.url), photo_path(photo)
-					%hr/
-					%h3= photo.title
-					%p= truncate(photo.description, length: 100)
-					%p= 'Photo taken by: ' + photo.user.email
-					%p= 'Uploaded ' + time_ago_in_words(photo.created_at) + ' ago.'
+	#masonry-myphotos.transitions-enabled
+		-@photos.each do |photo|
+			.box.panel.panel-default.design
+				= link_to image_tag(photo.image.url), photo_path(photo)
+				%hr/
+				%h3= photo.title
+				%p= truncate(photo.description, length: 100)
+				%p= 'Photo taken by: ' + photo.user.email
+				%p= 'Uploaded ' + time_ago_in_words(photo.created_at) + ' ago.'
