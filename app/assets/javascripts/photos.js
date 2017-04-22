@@ -7,8 +7,9 @@ $(function() {
     });
      $('#masonry-myphotos').masonry({
         itemSelector: '.box',
-        columnWidth: 100,
-        isAnimated: !Modernizr.csstransitions
+        columnWidth: 200,
+        isAnimated: !Modernizr.csstransitions,
+        isRTL: true
     });
 
 });
