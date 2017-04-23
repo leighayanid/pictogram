@@ -5,5 +5,11 @@ $(function() {
         isAnimated: !Modernizr.csstransitions,
         isFitWidth: true
     });
+     $('#masonry-myphotos').masonry({
+        itemSelector: '.box',
+        columnWidth: 200,
+        isAnimated: !Modernizr.csstransitions,
+        isLTR: true
+    });
 
 });

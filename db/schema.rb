@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170202110630) do
+ActiveRecord::Schema.define(version: 20170422113731) do
 
   create_table "photos", force: :cascade do |t|
     t.string   "title"
@@ -23,6 +23,21 @@ ActiveRecord::Schema.define(version: 20170202110630) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.index ["user_id"], name: "index_photos_on_user_id"
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string   "complete_name"
+    t.string   "address"
+    t.string   "bio"
+    t.string   "work"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.integer  "user_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -39,6 +54,12 @@ ActiveRecord::Schema.define(version: 20170202110630) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.integer  "role"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "address"
+    t.string   "bio"
+    t.date     "birthday"
+    t.string   "username"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

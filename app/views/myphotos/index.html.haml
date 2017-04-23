@@ -1,0 +1,9 @@
+.container
+	#masonry-myphotos.transitions-enabled
+		-@photos.each do |photo|
+			.box.panel.panel-default.design
+				= link_to image_tag(photo.image.url), photo_path(photo)
+				%hr/
+				%h3= photo.title
+				%p= truncate(photo.description, length: 100)
+				%p= 'You uploaded this ' + time_ago_in_words(photo.created_at) + ' ago.'

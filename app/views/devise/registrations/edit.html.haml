@@ -8,8 +8,13 @@
             = f.error_notification
 
             .form-inputs
+              = f.input :first_name, required: true, autofocus: true
+              = f.input :last_name, required: true
+              = f.input :username, required: true
+              = f.input :birthday, as: :date, required: true
+              = f.input :bio, required: true
+              = f.input :address, required: true
               = f.input :email, required: true, autofocus: true
-
               = if devise_mapping.confirmable? && resource.pending_reconfirmation?
                 %p
                   Currently waiting confirmation for:
