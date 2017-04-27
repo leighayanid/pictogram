@@ -51,7 +51,7 @@
 // resort if you really truly can't style your content more generally.
 // @import 'sections/profile_page';
 
-.img_preview{
+#preview_img{
 	height: 100%;
-	width: 100%;
+	width: 100% !important;
 }
