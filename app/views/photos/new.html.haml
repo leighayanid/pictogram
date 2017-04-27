@@ -2,5 +2,6 @@
 	.row.panel
 		.col-md-4
 			= render 'form'
-		.col-md-7.col-md-offset-1
-			= image_tag("img2.jpg", class: 'img_preview')
+		.col-md-7.col-md-offset-1#masonry-new.transitions-enabled
+			.box.panel.panel-default.img_preview
+				=image_tag "img2.jpg", id: "preview_img"
