@@ -10,4 +10,4 @@
 						%p= truncate(photo.description, length: 100)
 						%p= 'Photo taken by: ' + photo.user.first_name + " " + photo.user.last_name
 						%p= 'Uploaded ' + time_ago_in_words(photo.created_at) + ' ago. | ' + photo.created_at.strftime("%b %d,%Y")
-				- paginate @photos 
+				= paginate(@photos) 
