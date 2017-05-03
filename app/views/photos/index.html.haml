@@ -3,10 +3,11 @@
 		.col-md-6.col-md-offset-3
 			#masonry-container.transitions-enabled
 				-@photos.each do |photo|
-					.box.panel.panel-default.design
+					.box.panel.panel-default.design.page
 						= link_to image_tag(photo.image.url), photo_path(photo)
 						%hr/
 						%h3= photo.title
 						%p= truncate(photo.description, length: 100)
 						%p= 'Photo taken by: ' + photo.user.first_name + " " + photo.user.last_name
-						%p= 'Uploaded ' + time_ago_in_words(photo.created_at) + ' ago. | ' + photo.created_at.strftime("%b %d,%Y") 
+						%p= 'Uploaded ' + time_ago_in_words(photo.created_at) + ' ago. | ' + photo.created_at.strftime("%b %d,%Y")
+				= paginate(@photos) 

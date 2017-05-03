@@ -6,7 +6,7 @@ class PhotosController < ApplicationController
 	load_and_authorize_resource :through => :current_user, except: [:index]
 
   def index
-  	@photos = Photo.all.order("created_at DESC")
+  	@photos = Photo.all.order("created_at DESC").page(params[:page]).per(5)
   end
 
   def show
