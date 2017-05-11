@@ -6,10 +6,14 @@
 					= f.search_field :first_name_or_last_name_or_address_or_bio_or_username_cont, class: 'form-control', placeholder: 'Input keyword here such as name, username or address.'
 					%span.input-group-btn
 						= f.submit 'Search', class: 'btn btn-default'
+	%hr/
 	.row
 		.col-md-6
 			-@users.each do |photographer|
 				- if can? :read, @photographer
-					%h4= photographer.first_name + " " + photographer.last_name + " @" + photographer.username
+					=image_tag "", class: 'img-circle user_avatar' 
+					%h4
+						=photographer.first_name + " " + photographer.last_name
+						%small= "@" + photographer.username
 					%small= 'Joined ' + time_ago_in_words(photographer.created_at) + ' ago. | ' + photographer.created_at.strftime("%b %d,%Y")
 					%hr/
