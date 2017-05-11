@@ -1,14 +1,16 @@
 .container
 	.row
-		= search_form_for @q do |f|
-		.input-group
-			= f.search_field :first_name_cont, class: 'form-control', placeholder: 'Search file name here'
-			%span.input-group-btn
-				= f.submit 'Search', class: 'btn btn-success'
-		%hr/
+		.col-md-6.col-md-offset-3
+			= search_form_for @q do |f|
+				.input-group
+					= f.search_field :first_name_or_last_name_or_address_or_bio_or_username_cont, class: 'form-control', placeholder: 'Input keyword here such as name, username or address.'
+					%span.input-group-btn
+						= f.submit 'Search', class: 'btn btn-primary'
+				%hr/
 	.row
 		.col-md-6
 			-@users.each do |photographer|
 				- if can? :read, @photographer
 					%h5= photographer.first_name + " " + photographer.last_name
 					%span= 'Joined ' + time_ago_in_words(photographer.created_at) + ' ago. | ' + photographer.created_at.strftime("%b %d,%Y")
+					%hr/
