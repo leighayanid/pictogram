@@ -10,6 +10,6 @@
 		.col-md-6
 			-@users.each do |photographer|
 				- if can? :read, @photographer
-					%h5= photographer.first_name + " " + photographer.last_name
-					%span= 'Joined ' + time_ago_in_words(photographer.created_at) + ' ago. | ' + photographer.created_at.strftime("%b %d,%Y")
+					%h4= photographer.first_name + " " + photographer.last_name + " @" + photographer.username
+					%small= 'Joined ' + time_ago_in_words(photographer.created_at) + ' ago. | ' + photographer.created_at.strftime("%b %d,%Y")
 					%hr/
