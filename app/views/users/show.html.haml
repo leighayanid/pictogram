@@ -1,14 +1,13 @@
 .container
 	.row
 		.col-sm-12.user.text-center
-			=image_tag "img2.jpg", class: 'img_circle profile_photo'
+			=image_tag "img2.jpg", class: 'img-circle profile_photo'
 			%h3
 				=@user.first_name + " " + @user.last_name
 				%small
 					= @user.username
 			%h5= @user.bio		
 			%h5= @user.address 
-			%hr/
 			%h6
 				= @user.photos.count
 				photos uploaded
