@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 		end
 	end
   devise_for :users, :controllers => { }
+  resources :users, only: [:index, :show]
   get '/setup' => 'setup#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
