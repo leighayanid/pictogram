@@ -5,7 +5,7 @@
 				.input-group
 					= f.search_field :first_name_or_last_name_or_address_or_bio_or_username_cont, class: 'form-control', placeholder: 'Input keyword here such as name, username or address.'
 					%span.input-group-btn
-						= f.submit 'Search', class: 'btn btn-primary'
+						= f.submit 'Search', class: 'btn btn-default'
 	.row
 		.col-md-6
 			-@users.each do |photographer|
