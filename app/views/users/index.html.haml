@@ -17,7 +17,8 @@
 				- if can? :read, @photographer
 					=image_tag "img2.jpg", class: 'img-rounded user_avatar' 
 					%h4
-						=photographer.first_name + " " + photographer.last_name
+						= link_to (photographer.first_name + " " + photographer.last_name), user_path(photographer)
+
 						%small= "@" + photographer.username
 					%small.leigh= 'Joined ' + time_ago_in_words(photographer.created_at) + ' ago. | ' + photographer.created_at.strftime("%b %d,%Y")
 					%hr/
