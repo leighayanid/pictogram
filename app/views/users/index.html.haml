@@ -21,4 +21,5 @@
 
 						%small= "@" + photographer.username
 					%small.leigh= 'Joined ' + time_ago_in_words(photographer.created_at) + ' ago. | ' + photographer.created_at.strftime("%b %d,%Y")
-					%hr/
+					%hr
+			= paginate @users
