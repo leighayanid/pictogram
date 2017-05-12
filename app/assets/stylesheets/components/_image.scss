@@ -19,7 +19,8 @@
         height: 70px;
         position: relative;
         display: inline;
-        border-radius: 2px;
+        border-radius: 5px;
+        object-fit: cover;
     }
     h4 {
         position: relative;
@@ -35,7 +36,7 @@
     .profile_photo {
         height: 150px;
         width: 150px;
-        object-fit: contain;
+        object-fit: cover;
         // margin: 0 auto;
     }
 }
