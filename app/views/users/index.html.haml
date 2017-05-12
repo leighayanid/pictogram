@@ -15,7 +15,7 @@
 		.col-md-6.user
 			-@users.each do |photographer|
 				- if can? :read, @photographer
-					=image_tag @photographer.image.url, class: 'img-rounded user_avatar' 
+					=link_to image_tag(photographer.image.url), class: 'img-rounded user_avatar' 
 					%h4
 						= link_to (photographer.first_name + " " + photographer.last_name), user_path(photographer)
 
