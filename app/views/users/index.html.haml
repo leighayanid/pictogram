@@ -2,8 +2,8 @@
 	.row
 		.col-md-6
 			%h4
-				= @users.count
-				photographers alike. See what they post.
+				= pluralize(@users.count, "photographer")
+				alike. See what they post.
 		.col-md-6
 			= search_form_for @q do |f|
 				.input-group
@@ -15,7 +15,7 @@
 		.col-md-6.user
 			-@users.each do |photographer|
 				- if can? :read, @photographer
-					=image_tag "img2.jpg", class: 'img-rounded user_avatar' 
+					= link_to image_tag(photographer.image.url)
 					%h4
 						= link_to (photographer.first_name + " " + photographer.last_name), user_path(photographer)
 

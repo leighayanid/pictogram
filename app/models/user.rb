@@ -6,4 +6,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :photos
+  has_attached_file :image, :storage => :cloudinary, 
+		:path => ":id/:style/:filename",
+		:cloudinary_resource_type => :image, 
+		styles: { thumb: "150x150>" }, 
+		default_url: "/images/:style/missing.png",
+		validate_media_type: false
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 end

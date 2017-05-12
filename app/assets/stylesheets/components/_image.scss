@@ -1,40 +1,42 @@
-#masonry-myphotos{
-	.box{
-		width: 370px;
-	}
-	.panel{
-		margin: 5px;
-	}
+#masonry-myphotos {
+    .box {
+        width: 370px;
+    }
+    .panel {
+        margin: 5px;
+    }
 }
 
-#masonry-new{
-	.panel{
-		margin: 0%;
-	}
+#masonry-new {
+    .panel {
+        margin: 0%;
+    }
 }
 
-.user{
-	position: relative;
-	.user_avatar{
-		width: 70px;
-		height: 70px;
-		position: relative;
-		display: inline;
-	}
-	h4{
-		position: relative;
-		display: inline;
-		left: 10px;
-	}
-	.leigh{
-		position: relative;
-		display: inline;
-		left: -188px;
-		top: 20px;
-	}
-	.profile_photo{
-		height: 130px;
-		width: 130px;
-		// margin: 0 auto;
-	}
+.user {
+    img {
+        width: 70px;
+        height: 70px;
+        position: relative;
+        display: inline;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+    h4 {
+        position: relative;
+        display: inline;
+        left: 10px;
+    }
+    .leigh {
+        position: relative;
+        display: inline;
+        left: -188px;
+        top: 20px;
+    }
+    .profile_photo {
+        height: 150px;
+        width: 150px;
+        object-fit: cover;
+        // margin: 0 auto;
+    }
 }
