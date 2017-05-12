@@ -33,8 +33,9 @@
 		top: 20px;
 	}
 	.profile_photo{
-		height: 130px;
-		width: 130px;
+		height: 150px;
+		width: 150px;
+		object-fit: contain;
 		// margin: 0 auto;
 	}
 }
