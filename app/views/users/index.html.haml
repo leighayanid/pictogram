@@ -1,0 +1,25 @@
+.container
+	.row
+		.col-md-6
+			%h4
+				= @users.count
+				photographers alike. See what they post.
+		.col-md-6
+			= search_form_for @q do |f|
+				.input-group
+					= f.search_field :first_name_or_last_name_or_address_or_bio_or_username_cont, class: 'form-control', placeholder: 'Input keyword here such as name, username or address.'
+					%span.input-group-btn
+						= f.submit 'Search', class: 'btn btn-default'
+	%hr/
+	.row
+		.col-md-6.user
+			-@users.each do |photographer|
+				- if can? :read, @photographer
+					=image_tag "img2.jpg", class: 'img-rounded user_avatar' 
+					%h4
+						= link_to (photographer.first_name + " " + photographer.last_name), user_path(photographer)
+
+						%small= "@" + photographer.username
+					%small.leigh= 'Joined ' + time_ago_in_words(photographer.created_at) + ' ago. | ' + photographer.created_at.strftime("%b %d,%Y")
+					%hr
+			= paginate @users

@@ -1,0 +1,23 @@
+.container
+	.row
+		.col-sm-12.user.text-center
+			=image_tag "img2.jpg", class: 'img-circle profile_photo'
+			%h3
+				=@user.first_name + " " + @user.last_name
+				%small
+					= "@"+ @user.username
+			%h5= @user.bio		
+			%h5= @user.address 
+			%h6
+				= @user.photos.count
+				photos uploaded
+			%hr/
+		.col-sm-12
+			#masonry-myphotos.transitions-enabled
+				-@user.photos.each do |photo|
+					.box.panel.panel-default.design
+						= link_to image_tag(photo.image.url), photo_path(photo)
+						%hr/
+						%h3= photo.title
+						%p= truncate(photo.description, length: 100)
+						%p= 'You uploaded this ' + time_ago_in_words(photo.created_at) + ' ago.'
