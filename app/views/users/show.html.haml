@@ -1,7 +1,7 @@
 .container
 	.row
 		.col-sm-12.user.text-center
-			=image_tag "img2.jpg", class: 'img-circle profile_photo'
+			= link_to image_tag(@user.image.url), class: 'thumb img-circle profile_photo'
 			%h3
 				=@user.first_name + " " + @user.last_name
 				%small
