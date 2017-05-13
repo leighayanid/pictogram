@@ -1,4 +1,8 @@
 class Photo < ApplicationRecord
+	extend FriendlyId
+
+	friendly_id :title, use: :slugged
+	
 	acts_as_votable
 	belongs_to :user
 	has_attached_file :image, :storage => :cloudinary, 
