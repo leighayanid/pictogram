@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 20170513111146) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.string   "slug"
     t.index ["user_id"], name: "index_photos_on_user_id"
   end
 
