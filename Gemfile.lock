@@ -147,6 +147,8 @@ GEM
     font-awesome-sass (4.7.0)
       sass (>= 3.2)
     formatador (0.2.5)
+    friendly_id (5.2.1)
+      activerecord (>= 4.0.0)
     gherkin (4.1.1)
     gibbon (3.0.1)
       faraday (>= 0.9.1)
@@ -427,6 +429,7 @@ DEPENDENCIES
   faker
   fakeredis
   font-awesome-sass
+  friendly_id
   gibbon
   guard-cucumber
   guard-rspec (~> 4.6.4)

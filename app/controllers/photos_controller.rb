@@ -54,7 +54,7 @@ class PhotosController < ApplicationController
   private
 
   def find_photo
-  	@photo = Photo.find(params[:id])
+  	@photo = Photo.friendly.find(params[:id])
   end
 
   def photo_params

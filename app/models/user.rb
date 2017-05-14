@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  extend FriendlyId
+
+  friendly_id :username, use: [:slugged, :history]
   enum role: [:user, :admin]
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
