@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+	before_action :find_user
 	load_and_authorize_resource through: :current_user, except: [:index, :show]
 	load_and_authorize_resource param_methods: :user_params
 
@@ -9,6 +10,10 @@ class UsersController < ApplicationController
 
 	def show
 		
+	end
+
+	def find_user
+		@user = User.friendly.find(params[:id])
 	end
 
 	def user_params
