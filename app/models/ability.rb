@@ -9,6 +9,7 @@ class Ability
     	can :read, :all
     	can :create, Photo
       can :upvote, Photo
+      can :follow, User
     	# check if the user is associated with the photo
     	can :update, Photo do |photo|
     		photo.user == user
