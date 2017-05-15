@@ -11,6 +11,7 @@
 			%h6
 				= pluralize(@user.photos.count, "photo")
 				uploaded
+			= link_to @user.follow(user), class: 'btn btn-default'
 			%hr/
 		.col-sm-12
 			#masonry-myphotos.transitions-enabled

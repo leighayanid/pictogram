@@ -18,6 +18,6 @@ class User < ApplicationRecord
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
   #using acts_as_follower to follow user model
-  act_as_follower
-  act_as_followable
+  acts_as_follower
+  acts_as_followable
 end
