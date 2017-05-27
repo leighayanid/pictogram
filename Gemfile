@@ -105,3 +105,4 @@ gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'kaminari'
 gem 'friendly_id'
 gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
+

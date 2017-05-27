@@ -11,7 +11,7 @@
 					.panel-footer
 						%h4
 						Photo taken by
-						= @photo.user.email
+						= @photo.user.first_name + " " + @photo.user.last_name
 						- if user_signed_in?
 							.btn-group.pull-right
 								= link_to like_photo_path(@photo), method: :put, class: 'btn btn-default' do
