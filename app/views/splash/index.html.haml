@@ -1,9 +1,30 @@
-%h2.message Upload and save pictures that matter to you.
-#maximage
-  .first-item
-    = image_tag "img1.jpg", class: "image-max"
-  = image_tag "img2.jpg", class: "image-max"
-  = image_tag "img3.jpg", class: "image-max"
-  = image_tag "img4.jpg", class: "image-max"
-  = image_tag "img5.jpg", class: "image-max"
 
+.splash
+	%h1 Pictogramm
+	.nav-heading
+		= link_to "Login", new_user_session_path, class: 'btn-heading_login'
+		= link_to "Register", new_user_session_path, class: 'btn-heading_register'
+	.s1
+		.s1-wrapper
+			= link_to "Explore", photos_path, class: 'btn-s1'
+			%p.text-info Instagram for photographers alike.
+			%p.text-info_sub Sort of.
+		.bg
+			%figure
+			%figure
+			%figure
+			%figure
+			%figure
+			%figure
+			%figure
+	.s2
+		%p.text-info Explore the world of photography
+		= link_to "Join now", new_user_registration_path, class: 'btn-s2'
+	.s3
+		.s3-wrapper
+			%p.text-info It's free! Forever!
+			%p.text-info_sub We'll make money from ads.
+		= link_to "Login", new_user_session_path, class: 'btn-s3'
+	.s4
+.footer
+	%p All Rights Reserved &copy Pictogramm 2019

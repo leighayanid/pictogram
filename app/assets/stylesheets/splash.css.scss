@@ -18,112 +18,343 @@ $border-radius-large: 2px;
 @import 'bootstrap';
 @import 'components/slideup_header';
 // $slideup-navbar-height: $navbar-height !default;
-.btn-lg {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 12px;
-}
 
-$splash-section-padding: 4em;
-body.splash {
-    text-align: center;
-    p.info {
-        font-size: 1.5em;
-    }
-    section {
-        padding-top: $splash-section-padding;
-        padding-bottom: $splash-section-padding;
-        @extend .clearfix;
-    }
-    header {
-        height: 0;
-    }
-    .affix-top .navbar {
-        background: transparent;
-    }
-    .colored.primary {
-        background: $brand-primary;
-        color: white;
-        p {
-            padding: 2em 0;
-            font-size: 1.3em;
-        }
-    }
-    .inner-column {
-        @extend .col-sm-8;
-        @extend .col-sm-offset-2;
-    }
-    .inner-block {
-        @extend .col-md-3;
-        @extend .col-sm-6;
-        @media (max-width: $screen-xs-max) {
-            padding-left: 0;
-            padding-right: 0;
-        }
-    }
-    .quarter-block {
-        width: 25%;
-        float: left;
-        img {
-            @extend .img-responsive;
-        }
+$paleAqua: #B9D6F2;
+$maastrichBlue: #061A40;
+$mediumElectricBlue: #0353A4;
+$honoluluBlue: #006DAA;
+$prusianBlue: #003559;
+
+body {
+	background: white;
+}
+.splash {
+		background: #F6F6F6;
+		height: auto;
+		position: relative;
+
+    h1{
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-size: 2rem;
+			font-weight: 300;
+			padding: 3rem 10rem;
+
+			@media screen and (max-width: 800px) {
+				text-align: center;
+			}
     }
 }
 
-.btn-primary {
-    &:hover {
-        border: 1px solid $brand-primary;
-        background: white;
-        color: $brand-primary;
-    }
+.s1{
+	background: $maastrichBlue;
+	height: 50rem;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+
+	&-wrapper{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		@media screen and (max-width: 800px){
+			margin-left: 5rem;
+		}
+	}
 }
 
-.btn-primary-inverted {
-    background: white;
-    color: $brand-primary;
-    &:hover {
-        border: 1px solid white;
-        background: $brand-primary;
-        color: white;
-    }
+.s2 {
+	height: 100vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(black, .2), rgba(black, .2)), url('https://res.cloudinary.com/rentapp/image/upload/v1546928713/malte-wingen-381978-unsplash_y8ecdi.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: -5%;
+	-webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+	clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+
+	@media screen and (max-width: 800px){
+		-webkit-clip-path: none;
+		clip-path: none;
+		margin-top: 0;
+	}
 }
 
-.image-max {
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    // z-index: 1;
-    opacity: 0.6;
-    background: 
-    /* top, transparent red, faked with gradient */ 
-    linear-gradient(
-      rgba(0, 0, 0, 0.7), 
-      rgba(0, 0, 0, 0.7)
-    ),
-    /* bottom, image */
-    url(img1.jpg);
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    -ms-background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
+.s3 {
+	height: 60vh;
+	width: 100%;
+	background: $prusianBlue;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: -5%;
+
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+		margin: 5rem;
+		justify-content: center;
+		align-items: center;
+	}
 }
 
-.message {
-    margin-top: 20%;
-    font-size: 6em;
-    font-family: $font-family-barrio;
-    z-index: 222;
-    position: absolute;
-    color: white;
-    text-align: center;
+// buttons
+
+.btn-s1{
+	padding: 1.5rem 2.5rem;
+	border-radius: 5px;
+	background: white;
+	color: $navbar-default-link-color;
+	font-size: 1.5rem;
+	text-align: center;
+	width: 50%;
+	text-transform: uppercase;
+	transition: all .3s ease-out;
+	margin-bottom: 2rem;
+
+	@media screen and (max-width: 800px){
+		width: 75%;
+	}
+
+	@media screen and (max-width: 500px){
+		width: 90%;
+	}
+
+	&:hover{
+		text-decoration: none;
+		background: $maastrichBlue;
+		border: 1px solid white;
+	}
 }
 
-#maximage{
+.btn-s2{
+	color: white;
+	border: 3px solid white;
+	width: 15%;
+	text-align: center;
+	border-radius: 3px;
+	padding: 1rem 2rem;
+	font-size: 1.5rem;
+	margin-top: 2rem;
+	transition: all .25s ease-in-out;
+
+	@media screen and (max-width: 800px){
+		width: 25%;
+	}
+
+	@media screen and (max-width: 500px){
+		width: 40%;
+	}
+
+	&:hover{
+		background: white;
+		color: $mediumElectricBlue;
+		text-decoration: none;
+	}
+}
+
+.btn-s3{
+	@extend .btn-s1;
+	width: 15%;
+
+	@media screen and (max-width: 800px){
+		width: 25%;
+	}
+
+	@media screen and (max-width: 500px){
+		width: 40%;
+	}
+}
+
+.btn-heading_login{
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 2rem 10rem;
+	padding: .75rem 2rem;
+	border-radius: 5px;
+	border: 2px solid $maastrichBlue;
+	text-align: center;
+	color: white;
+	background: $maastrichBlue;
+	transition: all .3s ease;
+
+	@media screen and (max-width: 800px) {
+		visibility: hidden;
+	}
+
+	&:hover{
+		text-decoration: none;
+		background: white;
+		border: 2px solid $maastrichBlue;
+	}
+}
+
+.btn-heading_register{
+	position: absolute;
+	top: 0;
+	right: 7.5%;
+	margin: 2rem 10rem;
+	padding: .75rem 2rem;
+	border-radius: 5px;
+	text-align: center;
+	color: black;
+	border: 1px solid $maastrichBlue;
+	transition: all .3s ease;
+
+	@media screen and (max-width: 800px) {
+		display: none;
+	}
+
+	&:hover{
+		text-decoration: none;
+		color: white;
+		background: $maastrichBlue;
+	}
+}
+
+// text
+
+.text-info{
+	color: white;
+	line-height: 1rem;
+	letter-spacing: 1px;
+	font-size: 2rem;
+	margin-top: 2rem;
+	font-weight: 100;
+
+	@media screen and (max-width: 800px){
+		line-height: 2rem;
+	}
+
+	&_sub {
+		font-size: 1.5rem;
+		color: white;
+		letter-spacing: 1px;
+		font-weight: 100;
+	}
+}
+
+//image
+
+.img-s{
+	height: 70%;
+	width: 50%;
+	align-self: center;
+	object-fit: cover;
+}
+
+.footer{
+	height: 15rem;
+	width: 100%;
+	background: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.s4{
+	height: 70vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(black, .2), rgba(black, .2)), url('https://res.cloudinary.com/rentapp/image/upload/v1546928713/william-bayreuther-586504-unsplash_daubaa.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.bg {
+	width: 55rem;
+	height: 30rem;
+	position: relative;
+	align-self: center;
+
+	@media screen and (max-width: 800px) {
+		visibility: hidden;
+	}
+}
+
+.bg > figure {
+  animation: fade 30s linear infinite 0s;
+  backface-visibility: hidden;
+  background-size: cover;
+  background-position: center center;
+ 	height: 100%;
+	width: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+
+  &:nth-child(1) {
+    background-image: url('https://res.cloudinary.com/rentapp/image/upload/v1546928708/yingchou-han-241463-unsplash_vzl5qp.jpg');
+  }
+
+  &:nth-child(2) {
+    animation-delay: 10s;
+    background-image: url('https://res.cloudinary.com/rentapp/image/upload/v1546928726/charley-pangus-782885-unsplash_bngynq.jpg');
+  }
+
+  &:nth-child(3) {
+    animation-delay: 16s;
+    background-image: url('https://res.cloudinary.com/rentapp/image/upload/v1532492969/bg-small_a8fyc9.jpg');
+  }
+
+  &:nth-child(4) {
+    animation-delay: 22s;
+    background-image: url('https://res.cloudinary.com/rentapp/image/upload/v1547123900/casey-horner-1265504-unsplash_jmqcag.jpg');
+  }
+
+  &:nth-child(5) {
+    animation-delay: 28s;
+    background-image: url('https://res.cloudinary.com/rentapp/image/upload/v1547123901/ken-wyatt-1273496-unsplash_vmon6s.jpg');
+  }
+
+  &:nth-child(6) {
+    animation-delay: 34s;
+    background-image: url('https://res.cloudinary.com/rentapp/image/upload/v1535809479/daria-nepriakhina-474036-unsplash_vkjow4.jpg');
+	}
+	
+	&:nth-child(7) {
+    animation-delay: 40s;
+    background-image: url('https://res.cloudinary.com/rentapp/image/upload/v1547123899/hussain-faruhaan-1265656-unsplash_qlv9xt.jpg');
+  }
+
+}
+
+@keyframes fade {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  8% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+
+  17% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
